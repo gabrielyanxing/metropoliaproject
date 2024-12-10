@@ -22,14 +22,13 @@ const Level: React.FC<LevelProps> = ({
                                          gameWidth,
                                          gameHeight,
                                          socks,
-                                         time, // 新增
+                                         time,
                                          onProgressUpdate
                                      }) => {
     const [playerPosition, setPlayerPosition] = useState({ x: 100, y: 300 })
     const [backgroundPosition, setBackgroundPosition] = useState(0)
     const [progress, setProgress] = useState(0)
 
-    // Constants for game dimensions
     const SCREEN_WIDTH = gameWidth
     const SCREEN_HEIGHT = gameHeight
     const BACKGROUND_WIDTH = 2438
@@ -38,7 +37,6 @@ const Level: React.FC<LevelProps> = ({
     const PLAYER_HEIGHT = 26 * 2
     const SCROLL_THRESHOLD = SCREEN_WIDTH / 2
 
-    // Calculate the scale factor to maintain aspect ratio while filling the screen height
     const SCALE_FACTOR = SCREEN_HEIGHT / BACKGROUND_HEIGHT
 
     const maxBackgroundPosition = BACKGROUND_WIDTH - SCREEN_WIDTH / SCALE_FACTOR
